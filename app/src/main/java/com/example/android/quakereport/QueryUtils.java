@@ -61,22 +61,9 @@ public final class QueryUtils {
 
     private static URL createURL(String stringURL){
         URL url = null;
-        Uri uri = null;
-        Date currentDate = new Date();
-        //get current date
-        String endtimeVal = dateFormat.format(currentDate);
-        //get start date = current date - 30 days
-        Date startDate = new Date(currentDate.getTime() - 30 * 24 * 3600 * 1000l ); //Subtract 30 days
-        String starttimeVal = dateFormat.format(startDate);
-
         try {
             //append start and end times to the base URL
-            uri = Uri.parse(stringURL)
-                    .buildUpon()
-                    .appendQueryParameter("starttime",starttimeVal)
-                    .appendQueryParameter("endtime",endtimeVal)
-                    .build();
-            url = new URL(uri.toString());
+            url = new URL(stringURL);
         }
         catch(MalformedURLException e){
             Log.e(LOG_TAG,"Problem building url",e);

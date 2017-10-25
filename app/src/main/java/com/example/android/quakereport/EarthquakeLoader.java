@@ -3,6 +3,11 @@ package com.example.android.quakereport;
 import java.util.List;
 import android.content.AsyncTaskLoader;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.net.Uri;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
 
 /**
  * Created by thara on 10/20/17.
@@ -31,4 +36,5 @@ public class EarthquakeLoader extends AsyncTaskLoader<List<EarthQuake>> {
         List<EarthQuake> earthQuakeList = QueryUtils.fetchEarthQuakeData(mUrl);
         return earthQuakeList;
     }
+
 }

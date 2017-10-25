@@ -3,7 +3,6 @@ package com.example.android.quakereport;
 import android.app.Activity;
 import android.graphics.drawable.GradientDrawable;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +12,6 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.TimeZone;
-
-import static com.example.android.quakereport.R.id.date;
 import static com.example.android.quakereport.R.id.magnitude;
 
 /**
